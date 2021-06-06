@@ -2,7 +2,6 @@
 # coding: utf-8
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Loading Image
 pic1 = cv2.imread('pic2')
@@ -36,17 +35,10 @@ dim = (width, height)
 # resize image  
 collage_resized = cv2.resize(collage, dim, interpolation=cv2.INTER_AREA)
 
-
-# In[15]:
-
-
+# Displaying Collage on Display
 cv2.imshow('My_Collage', collage_resized)
 cv2.waitKey(10)
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
 
 
 
