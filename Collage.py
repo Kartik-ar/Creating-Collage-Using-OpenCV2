@@ -1,48 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[9]:
-
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-# In[10]:
-
-
+# Loading Image
 pic1 = cv2.imread('pic2')
 pic2 = cv2.imread('pic3')
 
-
-# In[ ]:
-
-
-
-
-
-# In[11]:
-
-
-# Creating plain image to concate in pic
+# Creating plain image to concate in pic1
 exl = np.zeros((25,225,3), np.uint8)
-
-
-# In[12]:
-
-
 n = np.concatenate((exl,pic2,exl),axis=0)
-
-
-# In[13]:
-
-
 collage = np.concatenate((pic1,n),axis=1)
-
-
-# In[14]:
-
 
 # Styling Collage
 cv2.line(collage,(200,0),(200,300),(161,22,171),5)
